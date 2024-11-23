@@ -8,28 +8,7 @@ module dfmt.main;
 import std.string : strip;
 
 static immutable VERSION = () {
-    debug
-    {
-        enum DEBUG_SUFFIX = "-debug";
-    }
-    else
-    {
-        enum DEBUG_SUFFIX = "";
-    }
-
-    version (built_with_dub)
-    {
-        enum DFMT_VERSION = import("dubhash.txt").strip;
-    }
-    else
-    {
-        /**
-         * Current build's Git commit hash
-         */
-        enum DFMT_VERSION = import("githash.txt").strip;
-    }
-
-    return DFMT_VERSION ~ DEBUG_SUFFIX;
+    return "v0.15.2-gd8e43e2";
 } ();
 
 
